@@ -44,7 +44,7 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 yes Y | sudo apt install oracle-java8-installer
 
 # Add the java directory to the "JAVA_HOME" environment variable
-echo 'JAVA_HOME="/usr/lib/jvm/java-8-oracle/jre/"' | sudo tee -a /etc/environment
+echo 'JAVA_HOME="/usr/lib/jvm/java-8-oracle/"' | sudo tee -a /etc/environment
 
 # Reload environment
 source /etc/environment
@@ -75,7 +75,7 @@ After=network.target
 [Service]
 Type=forking
 
-Environment=JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
+Environment=JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
 Environment=CATALINA_HOME=/opt/tomcat
 Environment=CATALINA_BASE=/opt/tomcat
