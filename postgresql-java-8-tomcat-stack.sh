@@ -113,4 +113,8 @@ sudo sed -i '$i\
 # Restart tomcat
 sudo systemctl restart tomcat
 
+# Install Apache 2
+sudo apt-get install apache2
+sudo ufw allow 'Apache Full'
+
 ## End
